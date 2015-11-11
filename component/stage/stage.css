@@ -1,0 +1,80 @@
+.h5animator-stage-wrapper{
+    display: inline-block;
+}
+.h5animator-stage .canvas-slide-container {
+    height: 100%;
+    position: relative;
+}
+.h5animator-stage-wrapper
+{
+    position: relative;
+    padding: 70px 14px 80px 14px;
+    border: 1px solid #b7b7b7;
+   
+}
+
+
+.i5s{
+    position: absolute;
+    background-color:#fff; 
+    background-image:
+    -webkit-image-set(
+        url(http://p4.pstatp.com/origin/9329/1129918106) 1x,
+        url(http://p4.pstatp.com/origin/9327/3304942426) 2x
+        
+    );
+}
+.i5s-lt{
+    width: 144px;
+    height: 68px;
+    left: -1px;
+    top: -1px;
+    background-position: -171px -13px;
+}
+.i5s-earphone {
+    width: 52px;
+    height: 28px;
+    left: 50%;
+    top: 20px;
+    margin-left: -26px;
+    background-position: -321px -36px;
+}
+.i5s-sidebotton {
+    width: 8px;
+    height: 170px;
+    left: -4px;
+    top: 96px;
+    background-position: -168px -107px;
+}
+
+.i5s-home {
+    width: 54px;
+    height: 54px;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -28px;
+    background-position: -319px -583px;
+}
+.i5s-rt{
+    width: 144px;
+    height: 68px;
+    background-position: right 0px;
+    right: -1px;
+    top: -4px;
+    background-position: -378px -10px;
+}
+.i5s-rb{
+    width: 144px;
+    height: 68px;
+    background-position: right bottom;
+    right: -1px;
+    bottom: -1px;
+    background-position: -378px -593px;
+}
+.i5s-lb{
+    width: 144px;
+    height: 68px;
+    left: -4px;
+    bottom: -1px;
+    background-position: -168px -593px;
+}
