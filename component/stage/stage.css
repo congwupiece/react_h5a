@@ -1,8 +1,19 @@
+.h5animator-center-area {
+    position: absolute;
+    left: 300px;
+    right: 320px;
+    height: 100%;
+}
 .h5animator-stage-wrapper{
     display: inline-block;
 }
+.h5animator-stage {
+  display: flex;  
+}
+
 .h5animator-stage .canvas-slide-container {
     height: 100%;
+    width: 100%;
     position: relative;
 }
 .h5animator-stage-wrapper

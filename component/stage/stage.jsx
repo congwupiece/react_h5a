@@ -5,22 +5,34 @@ define('Stage', function(require, exports, module) {
     var Stage = React.createClass({
         getInitialState:function(){
             return {
-                slide:this.props.slide
+                elements:this.props.elements,
+                background:this.props.background||{},
+                pageIndex:this.props.pageIndex||undefined,
+                elementsWatch:this.props.elementsWatch||true
             }
         },
         _buildElement:function(){
             //填充元素
-            var slide = this.state.slide;
-            var elements = slide.elements;
-            console.log(elements);
+            var _this = this;
+            var elements = this.state.elements;
             var elementNodes = [];
-            console.log(elements);
+            var pageIndex = this.state.pageIndex;
             elements.forEach(function(element,index){
                 // var key = Math.random();
                 var key = element.uuid;
+                var targetId;
+                if(_this.state.elementsWatch){ //左侧预览的元素不监控
+                    targetId = [pageIndex,index].join(".");  //元素序号（页号.元素序号） 0.1
+                }else{
+                    targetId = "";
+                }
+                
+                // var key =index;
                 switch(element.type){
                     case "image":
-                        elementNodes.push(<ImageElement style={element.style} key={key} content={element.content}/>);
+                        elementNodes.push(
+                            <ImageElement targetId={targetId} style={element.style} key={key} content={element.content}/>
+                        );
                         break;
                 }
             });
@@ -28,8 +40,7 @@ define('Stage', function(require, exports, module) {
         },
         _buildStageStyle:function(){
             //设置背景
-            var slide = this.state.slide;
-            var background = slide.background;
+            var background = this.state.background;
             var stageStyle = {
                 "backgroundColor":background["backgroundColor"],
                 "backgroundImage":background["backgroundImage"],
@@ -39,24 +50,30 @@ define('Stage', function(require, exports, module) {
             }
             return stageStyle;
         },
+        mouseDown:function(e){
+            console.log(e);
+            dataController.set({
+                "currentTarget":""
+            });
+        },
+        // componentDidUpdate: function (props, state) {
+        //     var isPressed = dataController.getOne("mouse.isPressed");
+        //     if (isPressed) {
+        //       document.addEventListener('mousemove', this.mouseMove)
+        //     } else if (isPressed) {
+        //       document.removeEventListener('mousemove', this.mouseMove)
+        //     }
+        // },
+        // mouseMove:function(e){
+        //     console.log(e);
+        // },
         render:function(){
             var _this = this;
             var elementNodes = this._buildElement();
             var stageStyle = this._buildStageStyle();
             return (
-                <div className="h5animator-stage-wrapper" id="dvStageWrapper">
-                    <div className="i5s i5s-lt"></div>
-                    <div className="i5s i5s-rt"></div>
-                    <div className="i5s i5s-earphone"></div>
-                    <div className="i5s i5s-home"></div>
-                    <div className="i5s i5s-lb"></div>
-                    <div className="i5s i5s-rb"></div>
-                    <div className="i5s i5s-sidebotton"></div>
-                    <div id="canvas" className="canvas" style={{"cursor": "default","width": "320px","height":"480px"}}>
-                        <div className="canvas-slide-container" style={stageStyle}>
-                            {elementNodes}
-                        </div>
-                    </div>
+                <div className="canvas-slide-container" onMouseDown={this.mouseDown} style={stageStyle}>
+                    {elementNodes}
                 </div>
             )
         }

@@ -9,10 +9,23 @@ define('elements/ImageElement', function(require, exports, module) {
                 style: this.props.style
             };
         },
+        mouseDown:function(e){
+            var targetId = this.props.targetId;
+            e.stopPropagation();
+            dataController.set({
+                "currentTarget":targetId
+            });
+        },
         render: function() {
             var styleObj = createStyleObjFromStyleData(this.state.style);
-            return ( 
-                <img src = {this.state.content.src} style={styleObj}/>
+            return (
+                // <ReactDraggable>
+                    <img
+                        draggable = "false"
+                        onMouseDown={this.mouseDown}
+                        src={this.state.content.src}
+                        style={styleObj} />
+                // </ReactDraggable>
             );
         }
     });

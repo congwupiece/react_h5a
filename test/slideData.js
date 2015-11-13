@@ -71,11 +71,13 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9105/2724837759\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9105/2724837759"],
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9105/2724837759"
+                ],
                 "id": "886422199"
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片2",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9107/1441935575"
                 },
@@ -119,7 +121,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9107/1441935575\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9107/1441935575"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9107/1441935575"
+                ]
             }],
             "uuid": "116384255",
             "steps": [{
@@ -138,7 +142,7 @@ define('test/slideData', function(require, exports, module) {
             },
             "elements": [{
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片3",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9102/7945468996"
                 },
@@ -182,10 +186,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9102/7945468996\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9102/7945468996"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9102/7945468996"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片4",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9102/7987296794"
                 },
@@ -229,10 +235,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9102/7987296794\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9102/7987296794"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9102/7987296794"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片5",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9101/8182667039"
                 },
@@ -276,10 +284,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9101/8182667039\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9101/8182667039"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9101/8182667039"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片6",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9104/4267631265"
                 },
@@ -323,7 +333,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9104/4267631265\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9104/4267631265"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9104/4267631265"
+                ]
             }],
             "uuid": "627373362",
             "steps": [{
@@ -342,7 +354,7 @@ define('test/slideData', function(require, exports, module) {
             },
             "elements": [{
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片7",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9111/2716325324"
                 },
@@ -386,10 +398,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9111/2716325324\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9111/2716325324"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9111/2716325324"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片8",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9112/1689436032"
                 },
@@ -433,7 +447,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9112/1689436032\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9112/1689436032"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9112/1689436032"
+                ]
             }, {
                 "type": "richtext",
                 "name": "示例文本",
@@ -496,7 +512,7 @@ define('test/slideData', function(require, exports, module) {
             },
             "elements": [{
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片9",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9095/7281686636"
                 },
@@ -540,10 +556,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9095/7281686636\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9095/7281686636"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9095/7281686636"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片10",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9101/1728164108"
                 },
@@ -587,10 +605,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9101/1728164108\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9101/1728164108"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9101/1728164108"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片11",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9101/2957184467"
                 },
@@ -634,7 +654,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9101/2957184467\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9101/2957184467"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9101/2957184467"
+                ]
             }],
             "uuid": "131762556",
             "steps": [{
@@ -653,7 +675,7 @@ define('test/slideData', function(require, exports, module) {
             },
             "elements": [{
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片12",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9103/654971311"
                 },
@@ -697,10 +719,12 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9103/654971311\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9103/654971311"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9103/654971311"
+                ]
             }, {
                 "type": "image",
-                "name": "新图片",
+                "name": "新图片13",
                 "content": {
                     "src": "http://p4.pstatp.com/origin/9100/4012382700"
                 },
@@ -744,7 +768,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9100/4012382700\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9100/4012382700"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9100/4012382700"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -791,7 +817,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9098/6774816151\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9098/6774816151"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9098/6774816151"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -838,7 +866,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9100/7592979681\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9100/7592979681"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9100/7592979681"
+                ]
             }],
             "uuid": "951015556",
             "steps": [{
@@ -901,7 +931,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9112/1339745994\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9112/1339745994"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9112/1339745994"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -948,7 +980,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9108/5465023659\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9108/5465023659"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9108/5465023659"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -995,7 +1029,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9106/8247329058\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9106/8247329058"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9106/8247329058"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -1042,7 +1078,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9106/8253293365\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9106/8253293365"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9106/8253293365"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -1089,7 +1127,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9106/8317646311\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9106/8317646311"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9106/8317646311"
+                ]
             }],
             "uuid": "464638918",
             "steps": [{
@@ -1152,7 +1192,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9110/6087800849\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9110/6087800849"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9110/6087800849"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片",
@@ -1199,7 +1241,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9114/623210331\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9114/623210331"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9114/623210331"
+                ]
             }],
             "uuid": "370450427",
             "steps": [{
@@ -1262,7 +1306,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9112/1792603340\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9112/1792603340"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9112/1792603340"
+                ]
             }],
             "uuid": "864866261",
             "steps": [{
@@ -1325,7 +1371,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9109/5776442694\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9109/5776442694"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9109/5776442694"
+                ]
             }, {
                 "type": "image",
                 "name": "新图片-拷贝",
@@ -1372,7 +1420,9 @@ define('test/slideData', function(require, exports, module) {
                     "color": "rgb(0, 0, 0)"
                 },
                 "html": "<img style=\"position: absolute; display: block; z-index: 6;\" src=\"http://p4.pstatp.com/origin/9109/5810521616\">",
-                "preLoadedURLs": ["http://p4.pstatp.com/origin/9109/5810521616"]
+                "preLoadedURLs": [
+                    "http://p4.pstatp.com/origin/9109/5810521616"
+                ]
             }],
             "uuid": "865673059",
             "steps": [{

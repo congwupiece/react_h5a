@@ -4,17 +4,41 @@
 <meta charset="UTF-8">
 <title>react_h5_a</title>
 <link rel="stylesheet" href="./component/stage/stage.css">
+<link rel="stylesheet" href="./component/leftPanel/leftPanel.css">
+<link rel="stylesheet" href="./component/layerManager/layerManager.css">
 </head>
 <body>
-    <div class="h5animator-stage" id="h5animator-stage"></div>
+    <section class="h5animator-left-pane" id="h5animator-left-pane"></section>
+    <section class="h5animator-center-area">
+        <div class="h5animator-stage" id="h5animator-stage">
+            <div class="h5animator-stage-wrapper" id="dvStageWrapper"  >
+                <div class="i5s i5s-lt"></div>
+                <div class="i5s i5s-rt"></div>
+                <div class="i5s i5s-earphone"></div>
+                <div class="i5s i5s-home"></div>
+                <div class="i5s i5s-lb"></div>
+                <div class="i5s i5s-rb"></div>
+                <div class="i5s i5s-sidebotton"></div>
+                <div id="canvas"
+                    class="canvas" style="cursor:default;width:320px;height:480px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="h5animator-layermanager" id="h5animator-layermanager"></section>
 </body>
 <script src="./lib/js/mod.js"></script>
 <script src="./lib/js/jquery-1.10.2.js"></script>
 <script src="./lib/js/immutable/3.7.5/immutable.js"></script>
+<script src="./dataController/index.js"></script>
 <script src="./lib/js/react/0.14/react.js"></script>
 <script src="./lib/js/react/0.14/react-dom.js"></script>
+<script src="./lib/react-color-picker/react-color-picker.js"></script>
+<!-- <script src="./lib/js/react-draggable.js"></script> -->
 <script src="./component/elements/ImageElement/ImageElement.js"></script>
 <script src="./component/stage/stage.js"></script>
+<script src="./component/layerManager/layerManager.js"></script>
+<script src="./component/leftPanel/leftPanel.js"></script>
 <script src="./tools/styleHelper.js"></script>
 <script src="./test/slideData.js"></script>
 <script src="./index.js"></script>

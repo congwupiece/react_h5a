@@ -1,0 +1,18 @@
+.h5animator-layermanager{
+    width: 200px;
+    position: absolute;
+    left: 200px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 4px;
+
+}
+
+.slides-layer-wrapper .slides-layer-items{
+    padding: 8px;
+}
+.slides-layer-wrapper .slides-layer-items.current{
+    padding: 8px;
+    background: #F85959;
+    color: #ffffff;
+}

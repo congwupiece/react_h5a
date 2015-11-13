@@ -1,0 +1,54 @@
+.h5animator-left-pane {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+}
+.h5animator-left-pane .add-slide-button-container {
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+.h5animator-left-pane .slides-outline-container {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.h5animator-left-pane .canvas-slide-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.h5animator-left-pane .slides-outline-container .slide-outline {
+    position: relative;
+    margin-left: 20px;
+    padding: 20px;
+    width: 120px;
+    height: 180px;
+}
+
+.h5animator-left-pane .slides-outline-container .slide-outline-container.current {
+    background-color: #F85959;
+}
+
+.h5animator-left-pane .slide-outline-content {
+    width: 320px;
+    height: 480px;
+    position: relative;
+    top: 0px;
+    -webkit-transform: scale(0.375, 0.375);
+    -webkit-transform-origin: 0px 0px;
+    transform: scale(0.375, 0.375);
+    transform-origin: 0px 0px;
+    overflow: hidden;
+    color: black;
+}
