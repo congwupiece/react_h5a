@@ -1,0 +1,30 @@
+.right-panel-container  .right-panel-nav-tabs{
+    border-bottom: 1px solid #ccc;
+}
+.right-panel-container .right-panel-tab-item{
+    position: relative;
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    min-width: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 0 18px;
+    height: 42px;
+    line-height: 42px;
+}
+.right-panel-container .right-panel-tab-item:first-of-type{
+    border-left:none;
+}
+.right-panel-container .right-panel-tab-item:last-of-type{
+    border-right:1px solid #ccc;
+}
+.right-panel-container .right-panel-tab-item.current{
+    background: #ea5655;
+    color: #fff;
+    border-color:#ea5655;
+}
+.right-panel-container .current+.right-panel-tab-item{
+    border-left-color:#ea5655;
+}

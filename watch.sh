@@ -1,1 +1,1 @@
-jsx -x jsx -w . .
+jsx -x jsx -w ./ ./

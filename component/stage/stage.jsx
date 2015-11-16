@@ -1,15 +1,17 @@
 define('Stage', function(require, exports, module) {
     "use strict";
     var ImageElement = require("elements/ImageElement");
-    
+    var ElementShadow = require("elements/ElementShadow");
+
     var Stage = React.createClass({
         getInitialState:function(){
             return {
                 elements:this.props.elements,
                 background:this.props.background||{},
                 pageIndex:this.props.pageIndex||undefined,
-                elementsWatch:this.props.elementsWatch||true
-            }
+                elementsWatch:this.props.elementsWatch||true,
+                currentTarget:this.props.currentTarget||""
+            };
         },
         _buildElement:function(){
             //填充元素
@@ -26,12 +28,18 @@ define('Stage', function(require, exports, module) {
                 }else{
                     targetId = "";
                 }
-                
+                var isCurrent=false;
+                if(_this.state.currentTarget===targetId){
+                    isCurrent=true;
+                    elementNodes.push(
+                        <ElementShadow style={element.style} key={"shoadow"+key}/>
+                    );
+                }
                 // var key =index;
                 switch(element.type){
                     case "image":
                         elementNodes.push(
-                            <ImageElement targetId={targetId} style={element.style} key={key} content={element.content}/>
+                            <ImageElement isCurrent={isCurrent} targetId={targetId} style={element.style} key={key} content={element.content}/>
                         );
                         break;
                 }
@@ -42,11 +50,11 @@ define('Stage', function(require, exports, module) {
             //设置背景
             var background = this.state.background;
             var stageStyle = {
-                "backgroundColor":background["backgroundColor"],
-                "backgroundImage":background["backgroundImage"],
-                "backgroundSize":background["backgroundSize"],
-                "backgroundRepeat":background["backgroundRepeat"],
-                "backgroundPosition":background["backgroundPosition"]
+                "backgroundColor":background['backgroundColor'],
+                "backgroundImage":background['backgroundImage'],
+                "backgroundSize":background['backgroundSize'],
+                "backgroundRepeat":background['backgroundRepeat'],
+                "backgroundPosition":background['backgroundPosition']
             }
             return stageStyle;
         },
@@ -75,8 +83,8 @@ define('Stage', function(require, exports, module) {
                 <div className="canvas-slide-container" onMouseDown={this.mouseDown} style={stageStyle}>
                     {elementNodes}
                 </div>
-            )
+            );
         }
     });
-    module.exports = Stage
+    module.exports = Stage;
 });

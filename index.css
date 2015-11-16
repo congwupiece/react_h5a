@@ -1,0 +1,47 @@
+body{
+    margin:0px;
+    padding: 0px;
+}
+*{
+    -webkit-user-select:none;
+}
+input{
+    -webkit-user-select:text;
+}
+.h5animator-top-bar{
+    height: 60px;
+    background-color: #282828;
+    color: #fff;
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+}
+
+.h5animator-center-area {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    left: 200px;
+    padding-top: 20px;
+    right: 280px;
+    height: 100%;
+    background-color: #F2F2F2;
+}
+
+.h5animator-style-editor{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.h5animator-right-pane{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    margin: 0;
+    width: 280px;
+}

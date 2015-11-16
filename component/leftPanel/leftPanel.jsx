@@ -57,7 +57,6 @@ define('LeftPanel', function(require, exports, module) {
                 if(_this.state.currentPage === index){
                     isCurrent = true;
                 }
-                console.log(_this.state.currentPage,isCurrent);
                 // var key = Math.random();
                 var key = index;
                 previewPage.push(
@@ -72,7 +71,6 @@ define('LeftPanel', function(require, exports, module) {
             return previewPage;
         },
         mouseDown:function(e){
-            console.log(e);
             dataController.set({
                 "currentTarget":""
             });

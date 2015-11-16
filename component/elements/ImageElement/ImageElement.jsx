@@ -6,25 +6,33 @@ define('elements/ImageElement', function(require, exports, module) {
         getInitialState: function() {
             return {
                 content: this.props.content,
-                style: this.props.style
+                style: this.props.style,
+                isCurrent:this.props.isCurrent
             };
         },
         mouseDown:function(e){
             var targetId = this.props.targetId;
             e.stopPropagation();
             dataController.set({
-                "currentTarget":targetId
+                "currentTarget":targetId,
+                "mouse.pressTarget":targetId
             });
         },
         render: function() {
             var styleObj = createStyleObjFromStyleData(this.state.style);
+            var currentClass="";
+            if(this.props.isCurrent){
+                currentClass="current";
+            }
             return (
                 // <ReactDraggable>
                     <img
+                        className={currentClass}
                         draggable = "false"
                         onMouseDown={this.mouseDown}
                         src={this.state.content.src}
-                        style={styleObj} />
+                        style={styleObj}
+                        />
                 // </ReactDraggable>
             );
         }
