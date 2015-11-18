@@ -22,6 +22,19 @@
     background: red;
 }
 
+.element-shadow .size-control-point-rb{
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    background: yellow;
+    border: 1px solid red;
+    right: -5px;
+    cursor: pointer;
+    bottom: -5px;
+    border-radius: 4px;
+    z-index: 20;
+}
+
 
 .i5s{
     position: absolute;

@@ -1,12 +1,22 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
 body{
-    margin:0px;
-    padding: 0px;
+    font-size: 14px;
+    font-family: BlinkMacSystemFont  'Microsoft Yahei' arial;
 }
 *{
     -webkit-user-select:none;
 }
 input{
     -webkit-user-select:text;
+}
+input,select{
+    outline-color: #3797FD;
+    outline-width: 2px;
+    outline-offset: -3px;
+    /*cursor: pointer;*/
 }
 .h5animator-top-bar{
     height: 60px;
@@ -27,7 +37,6 @@ input{
     left: 200px;
     padding-top: 20px;
     right: 280px;
-    height: 100%;
     background-color: #F2F2F2;
 }
 

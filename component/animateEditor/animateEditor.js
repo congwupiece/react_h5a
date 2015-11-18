@@ -1,5 +1,5 @@
-var dataController = require('dataController/dataController');
-var ImageElementContentEditor = React.createClass({displayName: "ImageElementContentEditor",
+var dataController = require('dataController');
+var AnimateEditor = React.createClass({displayName: "AnimateEditor",
     getInitialState:function(){
         return {
             element:this.props.element||{}
@@ -60,4 +60,4 @@ var ImageElementContentEditor = React.createClass({displayName: "ImageElementCon
         );
     }
 });
-module.exports = ImageElementContentEditor;
+module.exports = animateEditor;

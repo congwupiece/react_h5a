@@ -28,3 +28,49 @@
 .right-panel-container .current+.right-panel-tab-item{
     border-left-color:#ea5655;
 }
+
+.right-panel-container .property-group-title{
+    font-weight: normal;
+    background: #e8e8e8;
+    padding: 5px 40px;
+    font-size: 14px;
+    color: #4f4f4f;
+    position: relative;
+    text-shadow: 0 1px #ddd;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.right-panel-container .property-container {
+    position: relative;
+    height: 26px;
+    margin: 10px 0;
+    font-size: 12px;
+    display:flex;
+    display: -webkit-flex;
+}
+
+.h5animator-right-pane label.name {
+    display: inline-block;
+    margin-right: 6px;
+    width: 84px;
+    text-indent: 24px;
+    margin-top: 2px;
+}
+
+.h5animator-right-pane input,
+.h5animator-right-pane select {
+    flex:1;
+    -webkit-flex:1;
+    /*-webkit-appearance:none;*/
+    color: #333;
+    background: #fff;
+    border: 1px soild #d9d9d9;
+    height: 22px;
+    font-size: 14px;
+    text-indent: 8px;
+    margin-right: 20px;
+    line-height: 22px;
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+}

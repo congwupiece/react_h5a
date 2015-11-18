@@ -1,30 +1,29 @@
-define('tools/styleHelper', function(require, exports, module) {
-    "use strict";
-    var styleHelper = {
-        createStyleObjFromStyleData:function(styleData){
-            var styleObj = {
-                "position":"absolute"
-            };
-            make(styleData);
-            return styleObj;
-            function make(styleData){
-                for(var prop in styleData){
-                    var styleDesc = styleData[prop];
-                    if(typeof styleDesc === "string"){
-                        styleObj[prop] = styleDesc;
-                    }else if(typeof styleDesc === "object"){
-                        if(prop==="transform"){
-                           //这块需要再研究一下;
-                        }else{
-                            make(styleDesc);
-                        }
+var styleHelper = {
+    createStyleObjFromStyleData: function(styleData) {
+        var styleObj = {
+            "position": "absolute"
+        };
+        make(styleData);
+        return styleObj;
+
+        function make(styleData) {
+            for (var prop in styleData) {
+                var styleDesc = styleData[prop];
+                if (typeof styleDesc === "string") {
+                    styleObj[prop] = styleDesc;
+                } else if (typeof styleDesc === "object") {
+                    if (prop === "transform") {
+                        //这块需要再研究一下;
+                    } else {
+                        make(styleDesc);
                     }
                 }
             }
         }
     }
-    module.exports = styleHelper;
-});
+};
+module.exports = styleHelper;
+
 
 //  var testStyleData = {
 //     "background": {
@@ -64,5 +63,3 @@ define('tools/styleHelper', function(require, exports, module) {
 
 // var testResult = require('tools/styleHelper').createStyleObjFromStyleData(testStyleData);
 // console.log(testResult);
-
-

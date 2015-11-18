@@ -1,12 +1,13 @@
-var Stage = require("Stage");
-var LeftPanel = require("LeftPanel");
-var RightPanel = require("RightPanel");
-var LayerManager = require("LayerManager");
+var Stage = require("component/stage/stage");
+var LeftPanel = require("component/leftPanel/leftPanel");
+var RightPanel = require("component/rightPanel/rightPanel");
+var LayerManager = require("component/layerManager/layerManager");
 var defaultData = require("test/slideData");
-var dataController = require("dataController");
-var StyleEditor = require("StyleEditor");
-var ImageElementCreator  = require('elementsCreator/ImageElementCreator');
+var dataController = require("dataController/dataController");
+var StyleEditor = require("component/styleEditor/styleEditor");
+var ImageElementCreator = require("component/elementCreator/imageElementCreator/imageElementCreator");
 
+function init(){
 
 dataController.init({
     currentTarget:"",  //e.g 0.1:第一页第二个元素
@@ -86,24 +87,49 @@ function turnToPage(num){
 
 $(document).on("mousedown",function(e){
     var pressTarget = dataController.getOne("mouse.pressTarget");
-    var index = pressTarget.split(".");
-    var x,y;
-    if(pressTarget){
+    var currentTarget = dataController.getOne("currentTarget");
+    if(!currentTarget){return;}
+    var index = currentTarget.split(".");
+    var x,y,w,h;
+    if(pressTarget===currentTarget){
         var xKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.left";
         var yKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.top";
         x = dataController.getOne(xKey);
         y = dataController.getOne(yKey);
+    }else if(pressTarget==="SizeControlerRB"&&currentTarget){
+        var wKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.width";
+        var hKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.height";
+        w = dataController.getOne(wKey);
+        h = dataController.getOne(hKey);
     }
     dataController.set({
         "mouse.mouseDownX":e.clientX,
         "mouse.mouseDownY":e.clientY,
         "tempx":x,
         "tempy":y,
+        "tempw":w,
+        "temph":h,
         "mouse.isPressed":true
     });
 });
 
 $(document).on("mouseup",function(e){
+    var pressTarget = dataController.getOne("mouse.pressTarget");
+    var currentTarget= dataController.getOne("mouse.currentTarget");
+    var index = pressTarget.split(".");
+    var x,y;
+    if(currentTarget&&pressTarget===currentTarget){
+        var xKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.left";
+        var yKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.top";
+        x = dataController.getOne(xKey);
+        y = dataController.getOne(yKey);
+        var updateData={};
+        updateData[xKey] = x;
+        updateData[yKey] = y;
+        dataController.set(updateData,true);
+    }
+
+    //
     dataController.set({
         "mouse.isPressed":false,
         "mouse.pressTarget":""
@@ -112,31 +138,50 @@ $(document).on("mouseup",function(e){
 
 $(document).on("mousemove",function(e){
     var isPressed = dataController.getOne("mouse.isPressed");
-    if (isPressed) {
-        var pressTarget = dataController.getOne("mouse.pressTarget");
-        if(pressTarget){
-            var index = pressTarget.split(".");
-            var xKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.left";
-            var yKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.top";
-            var x = dataController.getOne("tempx");
-            var y = dataController.getOne("tempy");
-            var newX = parseInt(x)+e.clientX-dataController.getOne("mouse.mouseDownX");
-            var newY = parseInt(y)+e.clientY-dataController.getOne("mouse.mouseDownY");
-            console.log(
-                e.clientX-dataController.getOne("mouse.mouseDownX"),
-                e.clientY-dataController.getOne("mouse.mouseDownY"));
-            var updateData={};
-            updateData[xKey] = newX+'px';
-            updateData[yKey] = newY+'px';
-            dataController.set(updateData);
-        }
+    if (!isPressed) {
+        return;
     }
-    // dataController.set({
-    //     "mouse.mouseX":e.clientX,
-    //     "mouse.mouseY":e.clientY
-    // });
-    // console.log(e.clientX);
+    var pressTarget = dataController.getOne("mouse.pressTarget");
+    var currentTarget = dataController.getOne("currentTarget");
+    if(!currentTarget){
+        return;
+    }
+
+    var index = currentTarget.split(".");
+    var updateData={};
+    if(pressTarget===currentTarget){
+        var x = dataController.getOne("tempx");
+        var y = dataController.getOne("tempy");
+        var xKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.left";
+        var yKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.top";
+        var newX = parseInt(x)+e.clientX-dataController.getOne("mouse.mouseDownX");
+        var newY = parseInt(y)+e.clientY-dataController.getOne("mouse.mouseDownY");
+        // console.log(
+            // e.clientX-dataController.getOne("mouse.mouseDownX"),
+            // e.clientY-dataController.getOne("mouse.mouseDownY"));
+        updateData={};
+        updateData[xKey] = newX+"px";
+        updateData[yKey] = newY+"px";
+        dataController.set(updateData);
+    }else if(pressTarget==="SizeControlerRB"&&currentTarget){
+        var w = dataController.getOne("tempw");
+        var h = dataController.getOne("temph");
+        var wKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.width";
+        var hKey = "slideData.slides."+index[0]+".elements."+index[1]+".style.box.height";
+        var newW = parseInt(w)+e.clientX-dataController.getOne("mouse.mouseDownX");
+        var newH = parseInt(h)+e.clientY-dataController.getOne("mouse.mouseDownY");
+        updateData = {};
+        updateData[wKey] = newW+"px";
+        updateData[hKey] = newH+"px";
+        dataController.set(updateData);
+    }
+
 });
+
+}
+module.exports = init;
+
+
 
 // var p;
 // window.onmousedown=function(){
