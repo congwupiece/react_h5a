@@ -7,6 +7,7 @@ var dataController = require("dataController/dataController");
 var StyleEditor = require("component/styleEditor/styleEditor");
 var ImageElementCreator = require("component/elementCreator/imageElementCreator/imageElementCreator");
 
+
 function init(){
 
 dataController.init({
